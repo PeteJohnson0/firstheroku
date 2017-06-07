@@ -4,7 +4,7 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const dbUrl = process.env.MONGO_URL ? process.env.MONGO_URL : 'mongodb://localhost/fist-heroku-app'
+const dbUrl = process.env.MONGODB_URI ? process.env.MONGODB_URI : 'mongodb://localhost/fist-heroku-app'
 mongoose.connect(dbUrl);
 
 const app = express();
